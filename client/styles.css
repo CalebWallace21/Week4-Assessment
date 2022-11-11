@@ -1,0 +1,10 @@
+form {
+    display: flex;
+    
+}
+#goals-container {
+    margin-top: 25px;
+    border: 1px solid black;
+    
+    
+}
