@@ -11,7 +11,7 @@ const goalCallback = ({ data: goals }) => displayGoals(goals)
 const getAllGoals = () => axios.get(baseURL).then(goalCallback)
 const createGoal = body => axios.post(baseURL, body).then(goalCallback)
 const deleteGoal = id => axios.delete(`${baseURL}/${id}`).then(goalCallback)
-const updateGoal = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(goalCallback)
+const updateGoal = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(goalCallback).catch(err => alert(err.response.data))
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
